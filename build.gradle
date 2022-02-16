@@ -1,7 +1,4 @@
-
-
 plugins {
-    //id 'java-library'
     id "io.qameta.allure" version "2.8.1"
 }
 apply plugin: 'java'
@@ -36,6 +33,11 @@ configurations {
 }
 
 dependencies {
+    implementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    implementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    implementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
+    implementation "org.junit.jupiter:junit-jupiter:$junitVersion"
+
     implementation "com.codeborne:selenide:6.0.3"
     implementation "io.qameta.allure:allure-java-commons:$allureVersion"
     implementation "io.qameta.allure:allure-selenide:$allureVersion"
