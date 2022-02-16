@@ -16,8 +16,8 @@ tasks.withType(JavaCompile) {
 
 }
 
-def allureVersion = "2.14.0",
-    junitVersion = "5.7.1"
+def allureVersion = '2.17.2',
+    junitVersion = '5.8.2'
 
 allure {
     autoconfigure = true
@@ -38,7 +38,7 @@ dependencies {
     implementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
     implementation "org.junit.jupiter:junit-jupiter:$junitVersion"
 
-    implementation "com.codeborne:selenide:6.0.3"
+    implementation 'com.codeborne:selenide:6.3.0'
     implementation "io.qameta.allure:allure-java-commons:$allureVersion"
     implementation "io.qameta.allure:allure-selenide:$allureVersion"
     implementation "io.qameta.allure:allure-rest-assured:$allureVersion"
