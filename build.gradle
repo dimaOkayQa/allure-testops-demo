@@ -7,7 +7,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-
 }
 
 
@@ -33,7 +32,7 @@ configurations {
 }
 
 dependencies {
-    implementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    implementation "org.junit.jupiter:junit-jupiter-api:5.7.2"
     implementation "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     implementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
     implementation "org.junit.jupiter:junit-jupiter:$junitVersion"
