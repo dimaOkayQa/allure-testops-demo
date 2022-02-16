@@ -1,7 +1,21 @@
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.3"
+    }
+}
+
+
+
+
 plugins {
     id 'java-library-distribution'
     id 'application'
-    id "io.qameta.allure" version "2.8.1"
+    id 'io.qameta.allure' version '2.8.1'
 }
 
 
@@ -10,20 +24,19 @@ repositories {
 }
 
 
-def allureVersion = "2.14.0",
+def allureVersion = "2.17.2",
     junitVersion = "5.7.1"
 
 allure {
     autoconfigure = true
-    version = '2.14.0'
+    version = allureVersion
 
     useJUnit5 {
-        version = junitVersion
+        version = allureVersion
     }
 }
 dependencies {
     //testImplementation "io.qameta.allure:allure-java-commons:2.8.1"
-    //classpath "io.qameta.allure:allure-gradle:2.3"
     implementation "io.qameta.allure:allure-java-commons:$allureVersion"
     implementation "io.qameta.allure:allure-selenide:$allureVersion"
     implementation "io.qameta.allure:allure-rest-assured:$allureVersion"
