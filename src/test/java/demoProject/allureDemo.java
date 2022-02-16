@@ -10,8 +10,7 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.parameter;
-import static io.qameta.allure.Allure.step;
+import static io.qameta.allure.Allure.*;
 
 public class allureDemo {
     private static final String REPOSITORY = "eroshenkoam/allure-example";
@@ -62,29 +61,45 @@ public class allureDemo {
     }
 
 
-    /*
     @Test
-    @DisplayName("Поиск Issue по номеру в репозитории (Стэпы с аннотациями)")
-    @Owner("Dmitry Galas")
-    @Link(name = "BASE_URL", value = BASE_URL)
-    @Feature("Issues")
-    @Story("Поиск Issue по номеру в репозитории")
-    public void issueSearchingStepsAnnotations(){
-        parameter("Repository", REPOSITORY);
-        parameter("Issue number", ISSUE_NUMBER);
+    @AllureId("1")
+    @DisplayName("Demo repository is available on GitHub")
+    @Tags({@Tag("git"), @Tag("repo")})
+    @Owner("admin")
+    public void newTestMethod() {
+        step("Open https://github.com/");
 
-        steps.openMainPage();
-        steps.seatchAndOpenRepository(REPOSITORY);
-        steps.openRepositoryIssues();
-        steps.issueWithNumberExistent(ISSUE_NUMBER);
-
-
+        step("Input dimaOkayQa in a search field");
+        step("Search by all gitHub");
+        step("Click Users for displaying search by users");
+        step("Open dimaOkayQa profile");
+        step("Open Repositories tab");
+        step("Click allure-testops-demo repository");
     }
 
-     */
+    @Test
+    @AllureId("2")
+    @DisplayName(".gitignore is not empy")
+    @Tags({@Tag("git"), @Tag("gitignore")})
+    @Owner("admin")
+    public void newTestMethod2() {
+        step("Open Code tab");
 
+        step("Open .gitignore from root directory");
+    }
 
+    @Test
+    @AllureId("15")
+    @DisplayName("Test case from IDEA #15")
+    @Tags({@Tag("idea-15"), @Tag("idea-demo")})
+    @Owner("admin")
+    public void newTestMethod3() {
+        step("Launch IDEA");
 
+        step("Add the case");
 
+        step("Click to add the case in testOps");
+    }
 
+    public void newcase(){}
 }
