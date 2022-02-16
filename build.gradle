@@ -1,10 +1,8 @@
 plugins {
-    id 'java-library'
+    id 'java-library-distribution'
     id 'application'
     id "io.qameta.allure" version "2.8.1"
 }
-
-apply plugin: 'java-library-distribution'
 
 
 
